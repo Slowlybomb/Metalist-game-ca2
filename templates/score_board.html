@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" id="score_board_html">
+<head>
+    <meta charset="UTF-8">
+    <title>Score Board</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" type="image/x-icon" href="../static/img/favikon.png">
+</head>
+<body>
+    <header>
+        <ul>
+            <li><a class="button" href="{{ url_for('index') }}">MAIN MENU</a></li>
+        </ul>
+    </header>
+    <h1>Top IO Scores</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Player ID</th>
+                <th>Score</th>
+                <th>Time</th>
+                <th>Been Seen</th>
+                <th>n-Enemies</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for record in records %}
+            <tr>
+                <td>{{ record['player_id'] }}</td>
+                <td>{{ record['points'] }}</td>
+                <td>{{ record['recordTime'] }} sec</td>
+                <td>{% if record['beenSeen'] == 'true' %}
+                        Yes
+                    {% else %}
+                        No                              
+                    {% endif %}
+                </td>
+                <td>{{ record['amount_of_enemies'] }}
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

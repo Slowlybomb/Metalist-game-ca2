@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>METALIST</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='game.css') }}" />
+    <script src="{{ url_for('static', filename='game.js') }}" type="module"></script>
+    <link rel="icon" type="image/x-icon" href="../static/img/favikon.png">
+</head>
+
+<body>
+    <header>
+        <ul>
+            <li><a class="button" href="{{ url_for('index') }}">MAIN MENU</a></li>
+            <li><a class="button" href="{{ url_for('game') }}">RESTART</a></li>
+        </ul>
+    </header>
+    <section class="gameDisplay">
+        <p id="outcome"></p>
+        <canvas width="1085" height="760">
+        </canvas>
+    </section>
+    <section class="HUD">
+        <ul id="collectedItems"> Items:
+        </ul>
+        <ul id="messages"></ul>
+        <ul id="time"></ul>
+    </section>
+    <p id="amount_of_enemies">{{ amount_of_enemies }}</p>
+
+</body>
+
+</html>

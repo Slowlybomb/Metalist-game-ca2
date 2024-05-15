@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head id="instruction">
+    <meta charset="utf-8" />
+    <title>METALIST</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+    <link rel="icon" type="image/x-icon" href="../static/img/favikon.png">
+</head>
+
+<body>
+    <ul>
+        <li><a class="button" href="{{ url_for('index') }}">MAIN MENU</a></li>
+    </ul>
+    <section id="instruction_text">
+        <section>
+            <h2>Lore</h2>
+            <p>You're a die-hard fan of the football team <a
+                    href="https://en.wikipedia.org/wiki/FC_Metalist_1925_Kharkiv">"Metalist"</a>.
+                and never miss their games. You have traveled to Donetsk city to catch their match against<a
+                    href="https://en.wikipedia.org/wiki/FC_Shakhtar_Donetsk">"Shakhtar"</a>. However, you
+                also with a strong civil position about drinking in public (you love to drink in public), so if the
+                police
+                spot you, they'll likely approach you (leading to jail time). That is why you have to avoid
+                contact with them. Additionally, the local ultras are notorious for their hostility towards visitors,
+                and if
+                they catch sight of you, they won't hesitate to attack without warning. Hence, you need to evade them at
+                all
+                costs. The your aim is to prepare your self to football match. You need to take, ticket, scarf with your
+                favorite team emblem and flare. <strong>Do not miss the game!</strong></p>
+        </section>
+
+        <section>
+            <h2>How to play</h2>
+            <p>Use WASD to controll your player.</p>
+            <img src="../static/img/player.png" alt="player">
+            <img src="../static/img/WASD.png" alt="WASD">
+            <p>You also can hide in trash bins, just came close to them and press "SPACE"! If enemy see how you get in
+                trash bin, he confuses and stops following you.
+            <p>
+            <section>
+                <img src="../static/img/spacebar.png" alt="spacebar">
+                <img src="../static/img/plus.png" alt="plus" id="plus">
+                <img src="../static/img/garbage.png" alt="garbage">
+            </section>
+            <h3>Mechanics</h3>
+            <p>Enemies does not see you behind the wall. They have limited vision radius. If you will not be seen, you
+                will get extra points to your final result.</p>
+            <h2>Enemies</h2>
+            <p>Here is two types of enemies:</p>
+            <ul>
+                <li>
+                    <h3>Chaser</h3>
+                    <p>He is staying at one place . Then he starts chasing you.</p>
+                    <img src="../static/img/chaser.png" alt="chaser">
+                </li>
+                <li>
+                    <h3>Patroller</h3>
+                    <p>He is patrolling territory until he will see you. Then he starts chasing you, but after
+                        he lost you, he starts patrolling again.</p>
+                    <img src="../static/img/patroller.png" alt="patroller">\
+                </li>
+            </ul>
+        </section>
+    </section>
+    <ul>
+        <li><a class="button" href="{{ url_for('game') }}">RUSH INTO THE GAME!</a></li>
+    </ul>
+</body>
+
+</html>

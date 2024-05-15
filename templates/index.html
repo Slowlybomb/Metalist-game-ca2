@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>METALIST</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+    <link rel="icon" type="image/x-icon" href="../static/img/favikon.png">
+    <script src="{{ url_for('static', filename='menu.js') }}" type="module"></script>
+</head>
+
+<body>
+    <h1>METALIST</h1>
+    <section class="menu">
+        <ul>
+            <li>
+                <form action="{{ url_for('index') }}" method="post" novalidate>
+                    {{ form.hidden_tag() }}
+                    {{ form.player_id.label }}
+                    {{ form.player_id() }}
+                    {% for error in form.player_id.errors %}
+                    <div>{{ error }}</div>
+                    {% endfor %}
+                    </br>
+                    {{ form.amount_of_enemies.label }}
+                    {{form.amount_of_enemies()}}
+                    </br>
+                    {{ form.submit() }}
+                </form>
+            </li>
+            <li><a class="button" id="instruction" href="{{ url_for('instruction') }}">INSTRUCTION</a></li>
+            <li><a class="button" id="score" href="{{ url_for('score_board') }}">SCORE BOARD</a></li>
+        </ul>
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,149 @@
+@font-face {
+    font-family: 'PervitinaDex';
+    src: url('./fonts/pervitina-dex/Pervitina-Dex-FFP.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'KleinHeadline';
+    src: url('./fonts/KleinHeadline-BoldOblique.ttf') format('truetype');
+}
+
+html {
+    background: url("img/background_game.png"), rgb(180, 54, 108);
+    background-size:cover;
+    animation: floatUpDown 20s ease-in-out infinite;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    margin: 0;
+    justify-content: space-around;
+    display: flex;
+    justify-content: center;
+}
+
+canvas{
+    background: url("sprites/objects/floor.jpg"),  rgb(113, 113, 113);
+    background-size:contain;
+    display: block;
+    margin: 1em auto;
+    border-style: solid;
+    border-width: 20px;
+    border-color: rgba(3, 255, 7, 0.535) rgba(48, 108, 71, 0.523) rgba(48, 108, 71, 0.444) rgba(3, 255, 7, 0.44);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+
+}
+
+#outcome {
+    font-family: 'KleinHeadline', sans-serif;
+    color: red;
+    text-align: center;
+    font-size: 4em;
+    animation: rotateText 5s ease-in-out infinite;
+    text-shadow: -4px 4px 0px rgb(255, 255, 255);
+}
+
+.HUD{
+    display: flex;
+    justify-content: space-around;
+}
+
+.HUD ul {
+    margin: 1em;
+    font-family: 'PervitinaDex', sans-serif;
+    color: rgb(255, 170, 0);
+    font-size: 40px;
+    padding: 0;
+}
+
+.HUD #time {
+    font-family: 'KleinHeadline', sans-serif;
+}
+
+.HUD ul li {
+    font-size: 20px;
+    font-family: 'KleinHeadline', sans-serif;
+    color: rgb(180, 197, 180);
+    text-shadow: none;
+    list-style: none;
+}
+
+
+
+
+#outcome {
+    margin: 0;
+}
+
+header {
+    text-align: center;
+    margin: 0;
+    justify-content: space-around;
+    display: flex;
+    justify-content: center;
+}
+
+header ul{
+    list-style-type: none;
+    margin: 0;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    font-family: 'KleinHeadline', sans-serif;
+    font-size: 3em;
+    transition: transform 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+header ul li {
+    margin: 1em;
+    animation: rotateText 5s ease-in-out infinite;
+    
+}
+
+header ul li a{
+    text-shadow: 4px 4px 2px rgb(255, 234, 0);}
+body {
+    margin: 0;
+}
+
+ul li a:hover {
+    transition: transform 0.2s ease-in-out, color 0.2s ease-in-out;
+    color: #ff00269a;
+}
+
+
+#n-enemies{
+    display: none;
+}
+
+
+
+
+
+@keyframes floatUpDown {
+
+    0%,
+    100% {
+        background-position: center 0;
+    }
+
+    50% {
+        background-position: center 30%;
+    }
+}
+
+@keyframes rotateText {
+
+    0%,
+    100% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(-3deg);
+    }
+
+    75% {
+        transform: rotate(3deg);
+    }
+}
